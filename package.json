@@ -1,0 +1,8 @@
+{
+  "name": "nexus-public-contracts",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node test/workspace-contract.test.mjs"
+  }
+}
