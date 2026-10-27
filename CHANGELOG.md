@@ -1,5 +1,13 @@
 # Changelog
 
+## 2026-10-27 — Live contact-note verification and prompt processing repair
+
+A consented human check-in completed. The scheduled worker automatically saved three source-linked ordinary notes, and both private OneDrive copies passed content/source readback. The actual hosted next-call preparation included the saved context without creating another call or private session. A deidentified hosted follow-up test passed against that saved context. No second live call was placed.
+
+Live testing exposed and repaired two gaps: note discovery depended on the separate six-hour cost scan, and short answers could be missed when the topic appeared in the preceding question. The worker now performs bounded, task-gated metadata discovery while an eligible call is awaiting processing, deduplicates per-task results, and preserves the actual question with short source quotes. Next-call note context now remains valid bounded JSON.
+
+Validation: notebook24 and core325 checks passed; a real scheduled save, exact OneDrive readback, protected read-only next-context preview and hosted recall response were verified. Anonymous/admin-route access was rejected, and the scheduler/Graph health checks reported no errors. Existing legacy-call coverage limits remain tracked in issue #2. Personal content and provider identifiers remain outside this repository.
+
 ## 2026-10-27 — Contact notebook and workspace organization
 
 - Created a separately labeled `AI_Workspace/Nexus/` private area with Contacts, Conversation_Summaries, Operating_Notes and Recovery folders and a contact-name index.
