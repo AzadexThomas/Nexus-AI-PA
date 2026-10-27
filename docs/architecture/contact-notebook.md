@@ -1,6 +1,6 @@
 # Contact notebook design
 
-Status: implementation and verification in progress; see release notes for actual deployment evidence.
+Status: deployed on 2026-10-27. The initial private mirror has 23 readback-verified documents. See CHANGELOG.md for validation and the remaining live-call verification.
 
 ## Sources of truth
 
