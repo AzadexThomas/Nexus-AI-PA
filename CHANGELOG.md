@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-10-28 — Scoped dossier and creditor-assistance foundation
+
+Fixed a helper-scope error that prevented routed private views from rendering. Added authenticated section-level private reference lookup, source-checked owner corrections, optimistic Markdown/PDF synchronization, and a separate account-scoped creditor worker with durable states, duplicate prevention and written-term/confirmation guards. Ordinary contact and family scopes remain separate.
+
+Validation: 325 main regressions, 94 mocked creditor/dossier checks, 12 access-isolation checks, 12 file-sync contracts, four rendered browser views, and two focused hosted mock simulations passed. A real authorized private directory-metadata update passed both file readbacks. No live creditor call, financial commitment or enrollment was used for testing. Institution authentication and supported assistant authorization remain blockers. See [architecture](docs/architecture/creditor-assistance.md).
+
 ## 2026-10-27 — Live contact-note verification and prompt processing repair
 
 A consented human check-in completed. The scheduled worker automatically saved three source-linked ordinary notes, and both private OneDrive copies passed content/source readback. The actual hosted next-call preparation included the saved context without creating another call or private session. A deidentified hosted follow-up test passed against that saved context. No second live call was placed.

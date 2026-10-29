@@ -3,6 +3,6 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "test": "node test/workspace-contract.test.mjs"
+    "test": "node test/workspace-contract.test.mjs && node test/creditor-offer-contract.test.mjs"
   }
 }
