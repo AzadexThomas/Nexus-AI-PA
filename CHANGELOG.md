@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-10-29 — English IVR and call-proof startup handling
+
+Corrected optional-language handling: wait for default English when another language is merely offered; select an English key only when explicitly announced. Updated the keypad tool instructions and retained all sensitive-input restrictions. Provider validation now distinguishes incomplete startup metadata from a real binding mismatch, retries bounded read-only checks, and reports specific metadata-only denial reasons. Wrong agent, case, attempt, destination, line or expired proof still fails closed. Admin-only historical diagnostics never grant operational authority.
+
+Validation: 63 proof checks, 139 creditor/dossier checks and 325 core checks passed. Four hosted all-network-tools-mocked simulations passed, including default English, explicit English keypad selection, authentication refusal and unsafe-offer refusal. Read-only production replay verified the recorded call bindings at their original times; current expired proofs stayed rejected. The exact missing field at the original transient failure was not retained and cannot be proved retrospectively. No bank was redialed for testing.
+
 ## 2026-10-29 — Verified written offers and confirmation reconciliation
 
 Added a separate bounded full-text issuer-document reader without expanding ordinary email reply access. Written intake binds authenticated direct messages to the account, call-supplied plan reference and task date. The supported explicit labelled text format requires every material term and rejects extra conditions, incomplete letters, attachments and unsupported wording. Acceptance rechecks the source version, active verified call, current structured authority and readiness, then reserves once per case. Later matching written confirmation is required for confirmed enrollment. Delayed confirmation checks use backoff and a fixed maximum; they never repeat acceptance.
