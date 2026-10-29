@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-10-29 — Private dossier briefing before dialing
+
+The creditor dispatcher now prepares a current, case-bound private dossier snapshot before any call submission and passes it through the signed connector as a per-call context variable. It includes relevant dated facts/corrections, masked account, purpose, structured limits, permitted owner-phone lookup and an operator/alternate-verification fallback. Missing preparation stops submission. Existing pause and authorization checks run again before dialing. Shared knowledge bases and the global prompt contain no dossier facts or full identity secrets.
+
+Validation: 23 preparation checks, 147 creditor/dossier checks, 63 proof checks, 325 core checks and 12 access checks passed. Two real case previews were saved and read back, and their exact signed-payload mapping was checked locally without calling anyone. Ten hosted all-network-tools-mocked runs passed across five privacy/menu/safety scenarios, twice each. The first suite caught an explicit-English selection regression; it was corrected before the final passing suite. No real call or enrollment was used to test this release. Full identity-secret retrieval remains unfinished.
+
 ## 2026-10-29 — English IVR and call-proof startup handling
 
 Corrected optional-language handling: wait for default English when another language is merely offered; select an English key only when explicitly announced. Updated the keypad tool instructions and retained all sensitive-input restrictions. Provider validation now distinguishes incomplete startup metadata from a real binding mismatch, retries bounded read-only checks, and reports specific metadata-only denial reasons. Wrong agent, case, attempt, destination, line or expired proof still fails closed. Admin-only historical diagnostics never grant operational authority.
