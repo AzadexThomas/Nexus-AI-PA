@@ -4,7 +4,7 @@
 
 Added a separate bounded full-text issuer-document reader without expanding ordinary email reply access. Written intake binds authenticated direct messages to the account, call-supplied plan reference and task date. The supported explicit labelled text format requires every material term and rejects extra conditions, incomplete letters, attachments and unsupported wording. Acceptance rechecks the source version, active verified call, current structured authority and readiness, then reserves once per case. Later matching written confirmation is required for confirmed enrollment. Delayed confirmation checks use backoff and a fixed maximum; they never repeat acceptance.
 
-Validation: 136 mocked creditor/dossier checks, 325 core checks, 12 access-isolation checks and six inline-script checks passed. Production full-text source access, deployed bundle, bindings, capability readback and denial of an unbound written request were verified. No qualifying live offer or enrollment was used as a test. Other document formats and institution-specific authorization remain open integration gaps.
+Validation: 139 mocked creditor/dossier checks, 325 core checks, 12 access-isolation checks and six inline-script checks passed. Production full-text source access, deployed bundle, bindings, capability readback and denial of an unbound written request were verified. No qualifying live offer or enrollment was used as a test. Other document formats and institution-specific authorization remain open integration gaps.
 
 ## 2026-10-29 — Preserve creditor offers after call completion
 
