@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-10-29 — Authorization-first creditor calls
+
+Scheduled the authorized first calls to begin with the institutions' public assistant-authorization process. Private facts remain gated on task/destination/account-specific verification; enrollment stays disabled until written-source handling is verified. Added same-source financial freshness checks and deduplicated owner outcome/admission notices. No real creditor outcome is claimed before the scheduled calls run.
+
+Validation: 101 mocked creditor/dossier checks, 325 main regressions, 12 access checks, 12 synchronization contracts, four rendered interface views and two focused hosted mock simulations passed. Scheduled receipts were read back from the deployed worker. Personal identifiers, destinations, source documents and call receipts remain private.
+
 ## 2026-10-28 — Scoped dossier and creditor-assistance foundation
 
 Fixed a helper-scope error that prevented routed private views from rendering. Added authenticated section-level private reference lookup, source-checked owner corrections, optimistic Markdown/PDF synchronization, and a separate account-scoped creditor worker with durable states, duplicate prevention and written-term/confirmation guards. Ordinary contact and family scopes remain separate.
