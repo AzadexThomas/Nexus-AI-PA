@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-10-29 — Preserve creditor offers after call completion
+
+A finished provider call with saved options now moves to owner review instead of being mislabeled as having no verified options. Reserved acceptance retains its uncertain state and cannot be retried automatically. Offer records remain available for review.
+
+Validation: 108 mocked creditor/dossier checks passed, including saved-offer preservation and uncertain-acceptance precedence. Production source/authentication checks passed after deployment. Scheduled calls remained unchanged; no live call or enrollment was used as a test.
+
 ## 2026-10-29 — Authorization-first creditor calls
 
 Scheduled the authorized first calls to begin with the institutions' public assistant-authorization process. Private facts remain gated on task/destination/account-specific verification; enrollment stays disabled until written-source handling is verified. Added same-source financial freshness checks and deduplicated owner outcome/admission notices. No real creditor outcome is claimed before the scheduled calls run.
